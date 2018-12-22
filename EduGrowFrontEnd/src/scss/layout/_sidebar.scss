@@ -1,0 +1,53 @@
+
+.sidebar-container {
+    width: 100%;
+    min-height: 5rem;
+    height: 5rem;
+    padding: 0 2.5rem;
+    background: $sidebar_background_color;
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        border-bottom: .1rem solid $sidenav__border-color;
+        align-items: center;
+
+        & > h1 {
+            color: #fff;
+            padding: 1.5rem 0;
+            font-size: 2.4rem;
+            font-weight: normal;
+            color: $sidenav__font-color;
+
+            & > span {
+                color: #fff;
+            }
+        } 
+    }
+
+    &__nav {
+        flex: 0 0 100%;
+    }
+
+    .nav__link-list {
+        justify-content: start;
+        flex: 0 0 100%;
+
+        & > li {
+            font-size: 1.4rem;
+            padding: 10px;
+            color: #fff;
+        }
+    }
+}
+
+
+
+
+@media only screen and ($extra-small) {
+    .sidebar-container {
+        width: 280px;
+        min-height: 100%;
+        height: 100vh;
+    }
+}

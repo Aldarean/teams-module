@@ -1,7 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css?family=Catamaran:100,400,700|Roboto');
+
+// Base imports.
 @import 'base/reset';
 @import 'base/typography';
 @import 'base/variables';
 
-body { 
-    background-color: $color__primary;
-}
+// Layout imports.
+@import 'layout/pageContainer';
+@import 'layout/sidebar';
+@import 'layout/content';
+
+
+

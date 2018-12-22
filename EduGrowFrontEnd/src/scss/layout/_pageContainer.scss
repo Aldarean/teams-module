@@ -1,0 +1,13 @@
+
+.page-container {
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+}
+
+@media only screen and ($extra-small) {
+    .page-container {
+
+        flex-direction: row;
+    }
+}

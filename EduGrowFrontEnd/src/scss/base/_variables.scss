@@ -1,3 +1,17 @@
 
 
 $color__primary: green;
+$color__page-background: #f1f2f7;
+
+
+$sidebar_background_color: #272c33;
+$sidenav__border-color: #4e4e52;
+$sidenav__font-color: #c8c9ce;
+
+
+// Responsive breakpoints.
+$extra-small:  'min-width: 575px';
+
+:root {
+    background: $color__page-background;
+}
