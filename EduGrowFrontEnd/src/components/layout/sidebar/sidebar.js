@@ -7,7 +7,7 @@ class Sidebar extends Component {
       <div className="sidebar-container">
 
         <header className="sidebar-container__header">
-          <h1>Sufee <span>Admin</span></h1>
+          <h1>Edu <span>Grow</span></h1>
         </header>
           
         <nav className="sidebar-container__nav">  
