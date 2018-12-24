@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import CreateMenuService from './../../../services/sidebar/createMenuService';
+
 import Dashboard from '@material-ui/icons/Dashboard';
 import LibraryBooks from '@material-ui/icons/LibraryBooks';
 import People from '@material-ui/icons/People';
@@ -6,55 +8,64 @@ import MeetingRoom from '@material-ui/icons/MeetingRoom';
 import DataUsage from '@material-ui/icons/DataUsage';
 
 class Sidebar extends Component {
+
   render() {
+
+    let menuGeneral = [
+        {
+          type: 'menuItem',
+          icon: <Dashboard />,
+          text: 'Summary'
+        }
+    ];
+
+    let menuMenage = [
+      {
+        type: 'menuItem',
+        icon: <LibraryBooks />,
+        text: 'View classes'
+      },
+      {
+        type: 'menuItem',
+        icon: <People />,
+        text: 'Students'
+      },
+      {
+        type: 'menuItem',
+        icon: <MeetingRoom />,
+        text: 'Classrooms'
+      },
+
+    ];
+
+    let menuScores = [
+      {
+        type: 'menuItem',
+        icon: <DataUsage />,
+        text: 'Scores'
+      }
+    ];
+
     return (
-      <div className="sidebar-container">
+      <aside className="sidebar-container">
 
         <header className="sidebar-container__header">
           <h1>Edu <span>Grow</span></h1>
         </header>
-          
+
         <nav className="sidebar-container__nav">  
-          <ul className="nav__link-list">
-              <li>
-                <span class="link-icon"><Dashboard /></span>
-                <span class="link-text">Summary</span>
-              </li>
-          </ul>
+          <CreateMenuService  menuData={menuGeneral} />
 
           <h2>Manage</h2>
-          <ul className="nav__link-list">
-              <li>
-                <span class="link-icon"><LibraryBooks /></span>
-                <span class="link-text">View Classes</span>
-              </li>
-
-              <li>
-                <span class="link-icon"><People /></span>
-                <span class="link-text">Students</span>
-              </li>
-
-              <li>
-                <span class="link-icon"><MeetingRoom /></span>
-                <span class="link-text">Classrooms</span>
-              </li>
-          </ul>
-
+          <CreateMenuService  menuData={menuMenage} />
+          
           <h2>Grades</h2>
-          <ul className="nav__link-list">
-              <li>
-                <span class="link-icon"><DataUsage /></span>
-                <span class="link-text">Scores</span>
-              </li>
-
-            
-          </ul>
+          <CreateMenuService  menuData={menuScores} />
         </nav>
 
-      </div>
+      </aside>
     )
   }
 }
 
-
-export default Sidebar; 
+export default Sidebar;

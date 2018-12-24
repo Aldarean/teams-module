@@ -5,13 +5,13 @@ import NotificationImportant from '@material-ui/icons/NotificationImportant';
 class TopNav extends Component {
   render() {
     return (
-      <div class="topnav">
+      <div className="topnav">
         
-          <div class="topnav__item">
+          <div className="topnav__item">
             <Search />
           </div>
 
-          <div class="topnav__item">
+          <div className="topnav__item">
             <NotificationImportant />
           </div>
 
