@@ -1,9 +1,11 @@
 
 .sidebar-container {
     width: 100%;
+    position: relative;
     min-height: 5rem;
     padding: 0 1.5rem;
     background: $sidebar_background_color;
+    z-index: 100;
 
     &__header {
         display: flex;
@@ -30,11 +32,6 @@
     
     }
 
-    &__mobile-nav {
-        flex: 0 0 100%;
-        height: 600px;
-        background-color: chocolate;
-    }
 
     &__nav {
         flex: 0 0 100%;
@@ -83,6 +80,59 @@
     }
 }
 
+
+
+.mobile-menu__wrapper {
+    background-color: $sidebar_background_color;
+}
+
+.mobile-nav {
+    flex: 0 0 100%;
+
+    background-color: $sidebar_background_color;
+    padding: .5rem 1.5rem .5rem 1.5rem;
+
+    & > h2 {
+        padding: .5rem 0;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: $sidenav__icon-color;
+        text-transform: uppercase;
+        border-bottom: .1rem solid $sidenav__border-color
+    }
+
+    .nav__link-list {
+        justify-content: start;
+        flex: 0 0 100%;
+        align-items: center;
+        margin: 0 0 1rem 0;
+
+        & > li {
+            font-size: 1.4rem;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            color: $sidenav__font-color;
+
+            .link-icon {
+                padding-right: 2rem;
+                display: inline-block;
+                align-items: center;
+                margin-top: .2rem;
+                color: $sidenav__icon-color;
+
+                svg {
+                    height: 1.6rem;
+                    width: 1.6rem;
+                }
+            }
+
+            .link-text {
+                letter-spacing: .1rem;
+            }
+        }
+    }
+}
 
 
 
