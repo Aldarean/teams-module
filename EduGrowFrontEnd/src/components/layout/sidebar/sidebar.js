@@ -79,7 +79,7 @@ class Sidebar extends Component {
 			{
 				const mobileNav = (
 					<div className="mobile-menu__wrapper">
-						<Slide left duration={600}>
+						<Slide top duration={300}>
 							<nav className="mobile-nav">
 								<CreateMenuService  menuData={this.state.menuGeneral} />
 
@@ -112,7 +112,6 @@ class Sidebar extends Component {
 			{
 				if (this.state.showDesktopNav === false)
 				{
-					console.log('i execute');
 					activateMobileMenu();
 					this.setState({ showDesktopNav: true});
 				}

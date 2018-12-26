@@ -1,20 +1,118 @@
 
 
+.searchbar {
+    width: 100%;
+    z-index: 300;
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 0;
+    height: 7rem;
+    background-color: $topnav__searchbar-bg-color;
+    border-bottom: .1rem solid #000;
+    -webkit-box-shadow: 1px 3px 16px 0px rgba(38,50,56,0.71); 
+    -moz-box-shadow: 1px 3px 16px 0px rgba(38,50,56,0.71); 
+    box-shadow: 1px 3px 16px 0px rgba(38,50,56,0.71);
+
+    .searchbar-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        height: 100%;
+        align-items: center;
+       
+        &__search-input {
+            width: 30rem;
+            margin-left: 2rem;
+
+            input {
+                border: none;
+                background: $topnav__searchbar-bg-color;
+                color: $sidenav__icon-color;
+                outline: none;
+                font-size: 1.8rem;
+                caret-color: $color__primary;
+            }
+        }
+    
+        &__search-close {
+            width: 1.6rem;
+            color: $sidenav__icon-color;
+            cursor: pointer;
+            margin-right: 2rem;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+  
+}
+
 .topnav {
     flex: 0 0 100%;
     display: flex;
     background-color: #fff;
-    align-items: center;
-    justify-content: start;
-    height: 7rem;
+    justify-content: flex-end;
+    height: 4rem;
     border-bottom: .1rem solid $sidenav__border-color;
+    position: relative;
 
     &__item {
+        display: flex;
+        position: relative;
         align-items: center;
-        margin: 0 1.5rem;
+        padding: 0 1rem 0 1rem;
+        height: 100%;
+        border-left: .1rem solid $topnav__item-border-color;
+        cursor: pointer;
+
+        & > img {
+            max-height: 4rem;
+        }
     }
 
-    &__item:first-child {
-        margin-left: 7.5rem;
+    &__item:hover {
+        background: $topnav__item-hover-bg-color;
     }
+
+    &__item:last-child {
+        margin-right: 0;
+        padding: 0;
+    }
+}
+
+
+@media only screen and ($extra-small) {
+
+    .topnav {
+        height: 7rem;
+
+    
+        &__item {
+
+            padding: 0 2rem 0 2rem;
+
+    
+            & > img {
+                max-height: 7rem;
+            }
+        }
+    }
+
+    .searchbar {
+        .searchbar-container {
+            justify-content: space-around;
+    
+            &__search-input {
+                margin-left: 0;
+            }
+        
+            &__search-close {
+                margin-right: 0;
+            }
+        }
+    }
+   
 }
