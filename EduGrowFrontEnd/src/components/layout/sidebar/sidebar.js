@@ -12,6 +12,7 @@ import Menu from '@material-ui/icons/Menu';
 class Sidebar extends Component {
 
 	state = {
+		showMobileMenu: false,
 		mobileNav: '',
 		showDesktopNav: true,
 		desktopNav: '',
@@ -123,7 +124,7 @@ class Sidebar extends Component {
 		return (
 			<div>
 				<aside className="sidebar-container">
-
+					
 					<header className="sidebar-container__header">
 						<h1>Edu <span>Grow</span></h1>
 
